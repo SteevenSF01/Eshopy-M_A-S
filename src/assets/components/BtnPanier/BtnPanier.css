@@ -1,0 +1,15 @@
+.btnPanier{
+    height: 40px;
+    width: 150px;
+    border: 1px solid #007f5f;
+    border-radius: 15px;
+    background-color: #00cc7a;
+    color: white;
+
+}
+
+.btnPanier:active{
+    box-shadow: inset 1px 2px 5px #777;
+    transform: translateY(1px);
+    background: #e5e5e5;
+}
