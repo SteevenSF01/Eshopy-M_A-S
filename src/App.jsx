@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <h1 className="text-3xl font-bold underline animate-wiggle animate-twice ">
-      Hello monde
+      Hello monde 12
     </h1>    </>
   )
 }
