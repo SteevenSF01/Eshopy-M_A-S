@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-
+import Discriptif from './assets/components/Discriptif/Discriptif'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-        <h1 className="text-3xl font-bold underline animate-wiggle animate-twice ">
-      Hello monde 12
-    </h1>    </>
+    <Discriptif/>
+           </>
   )
 }
 
