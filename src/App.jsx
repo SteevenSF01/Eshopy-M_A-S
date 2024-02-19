@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-        <h1 className="text-3xl font-bold underline animate-wiggle animate-twice">
-      Hello world!
+        <h1 className="text-3xl font-bold underline animate-wiggle animate-twice ">
+      Hello monde
     </h1>    </>
   )
 }
