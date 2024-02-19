@@ -10,9 +10,7 @@ function App() {
     <>
         <h1 className="text-3xl font-bold underline animate-wiggle animate-twice">
       Hello world!
-    </h1>
-    <h1>Amin</h1>
-    </>
+    </h1>    </>
   )
 }
 
