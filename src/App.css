@@ -1,5 +1,5 @@
 body{
-  height: 100vh;
+  height: max-content;
   background: rgb(235,33,247);
   background: linear-gradient(4deg, rgba(94,26,209,1)  0%,rgb(13, 18, 88) 50%);
 }
