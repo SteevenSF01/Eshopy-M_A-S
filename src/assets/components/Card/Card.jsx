@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Card(props) {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-16 mt-[50px]  ">
+    <div className="flex flex-wrap justify-center items-center gap-16 pt-[100px]  ">
       {props.lesImages.map((element, key) =>{
         return(
           <div key={key} className="card card-compact w-[300px] h-fit md:w-[400px] bg-base-100 shadow-xl ">

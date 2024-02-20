@@ -1,6 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display&family=Sora:wght@100..800&display=swap');
+
 body{
   height: max-content;
-  /* width: 100vw; */
+  font-family: 'Lora';
   background: rgb(235,33,247);
-  background: linear-gradient(4deg, rgba(94,26,209,1)  0%,rgb(13, 18, 88) 50%);
+  background: linear-gradient(-45deg,#23d5ab, #23a6d5, #82245f, #ee7752 ); 
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
