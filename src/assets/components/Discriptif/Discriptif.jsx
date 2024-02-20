@@ -10,7 +10,7 @@ export default function Discriptif(props) {
         <div className='tableau relative'>
         <button 
         onClick={()=> props.setOuvert(!props.ouvert)}
-        className='btnFermeture absolute right-0'>X</button>
+        className='btnFermeture absolute top-0 right-0'>X</button>
 
             <div className='divLeftTaleau'>
               <div className='divImageTableau'>
@@ -23,7 +23,7 @@ export default function Discriptif(props) {
               </div>
               <p className="paragapheTitle">Auteur: <span>{props.cible.auteur}</span></p> <br />
               <p className="paragapheTitle">Prix: <span>{props.cible.prix} ETH </span></p> <br />
-              <p className="paragapheTitle">description de l'objet: <span>{props.cible.description} </span>  </p>
+              <p className="paragapheTitle paragapheTitle2">description de l'objet: <span>{props.cible.description} </span>  </p>
             {
              <div className='divBtnPanierDiscriptif'>
                 <BtnPanier/>
