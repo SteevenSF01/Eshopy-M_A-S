@@ -21,7 +21,7 @@ export default function Discriptif(props) {
               <div className='divTitle'>
                 <p className='titleDiscriptif'>{props.cible.titre}</p> <br />
               </div>
-              <p className="paragapheTitle">Auteur: <span>Jeremie Dubois</span></p> <br />
+              <p className="paragapheTitle">Auteur: <span>{props.cible.auteur}</span></p> <br />
               <p className="paragapheTitle">Prix: <span>{props.cible.prix} ETH </span></p> <br />
               <p className="paragapheTitle">description de l'objet: <span>{props.cible.description} </span>  </p>
             {
