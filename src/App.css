@@ -6,7 +6,7 @@ body{
   justify-content: center;
   align-items: center;
   font-family: 'Lora';
-  background-color: rgb(0, 2, 57);
+  background-color: #000239;
   background-size: 400% 400%;
   animation: gradient 4s ease infinite;
 }

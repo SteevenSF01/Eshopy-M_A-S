@@ -25,14 +25,14 @@ let images = [
   },
   {
     id: 2,
-    titre : "Chaise",
+    titre : "Chair",
     image: Chaise,
     description : "Une chaise turquoise est habillée de coulures de peinture mauve et orange, agrémentée de nuances subtiles de jaune et de vert. Cette fusion de couleurs évoque une énergie créative dynamique et spontanée, faisant de cette chaise un symbole d'expression artistique et d'imagination débordante.",
     prix : 0.59,
   },
   {
     id: 3,
-    titre : "Chaton",
+    titre : "Kitty",
     image: Chaton,
     description : "Découvrez un adorable chaton aux tons vifs et expressifs. Mêlant des nuances de mauve et d'orange, s'illumine subtilement de touches de jaune et de vert. Les teintes vibrantes reflètent la vitalité et la curiosité de ce jeune félin, captivant le cœur avec sa douceur et son charme irrésistibles.",
     prix : 0.42,
