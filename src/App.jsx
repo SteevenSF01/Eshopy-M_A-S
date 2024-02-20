@@ -101,13 +101,14 @@ let images = [
 
 function App() {
   const [ouvert, setOuvert] = useState(false);
+  const [cible, setCible] = useState(null)
 
   return (
     <>
       <Navbar />
       {/* <Sidebar/> */}
-      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={images} />
-      {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} /> : ""}
+      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={images} setCible = {setCible} />
+      {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={images} cible = {cible} />  : ""}
       {/* <Discriptif  /> */}
     </>
   );

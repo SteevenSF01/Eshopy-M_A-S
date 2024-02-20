@@ -4,6 +4,7 @@ import test from './../../images/chaise.jpg'
 import BtnPanier from '../BtnPanier/BtnPanier'
 
 export default function Discriptif(props) {
+    console.log(props.cible);
   return (
     <div className='Discriptif'>
         <div className='tableau relative'>
@@ -13,18 +14,16 @@ export default function Discriptif(props) {
 
             <div className='divLeftTaleau'>
               <div className='divImageTableau'>
-                <img className='test' src={test} alt="" />
+                <img className='test' src={props.cible.image} alt="" />
               </div>
             </div>
             <div className='divRightTableau'>
               <div className='divTitle'>
-                <p className='titleDiscriptif'>Nom de l'objet</p> <br />
+                <p className='titleDiscriptif'>{props.cible.titre}</p> <br />
               </div>
               <p className="paragapheTitle">Auteur: <span>Jeremie Dubois</span></p> <br />
-              <p className="paragapheTitle">prix: <span>100€</span></p> <br />
-              <p className="paragapheTitle">description de l'objet: <span>Lorem ipsum dolor sit amet consectetur adipisicing elit
-               Officia quam dolorem ducimus nihil voluptatum non dolor ex eaque. Quae sapiente minus
-                praesentium</span>  </p>
+              <p className="paragapheTitle">Prix: <span>{props.cible.prix} ETH </span></p> <br />
+              <p className="paragapheTitle">description de l'objet: <span>{props.cible.description} </span>  </p>
             {
              <div className='divBtnPanierDiscriptif'>
                 <BtnPanier/>
