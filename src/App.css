@@ -1,4 +1,10 @@
 body{
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
+=======
+  height: 100vh;
+  background: rgb(235,33,247);
+  background: linear-gradient(4deg, rgba(94,26,209,1)  0%,rgb(13, 18, 88) 50%);
+>>>>>>> 5a96a42e3ec3038008f127b55fb22ca270a3c226
 }

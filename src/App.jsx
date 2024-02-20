@@ -1,16 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import Discriptif from './assets/components/Discriptif/Discriptif'
-import BtnPanier from './assets/components/BtnPanier/BtnPanier'
+import { useState } from "react";
+import "./App.css";
+import Discriptif from "./assets/components/Discriptif/Discriptif";
+import Navbar from "./assets/components/navbar/Navbar";
+import Card from "./assets/components/Card/Card";
+
+
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-    <BtnPanier/>
-    <Discriptif/>
-           </>
-  )
+      <Navbar />
+      <Card />
+      <Discriptif />
+    </>
+  );
 }
 
-export default App
+export default App;
