@@ -17,8 +17,9 @@ export default function Card(props) {
           <div className="card-body">
             <h2 className="card-title">{element.titre}</h2>
             <p>{element.description}</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            <div className="card-actions justify-between">
+              <button className="btn btn-primary mt-5 ">Plus d'info</button>
+              <button className="btn btn-primary mt-5 ">Achetez Maintenant</button>
             </div>
           </div>
         </div>
