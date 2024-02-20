@@ -98,8 +98,8 @@ function App() {
     <>
       <Navbar />
       <Sidebar/>
-      {/* <Card lesImages = {images} />
-      <Discriptif/> */}
+      <Card lesImages = {images} />
+      <Discriptif/>
     </>
   );
 }
