@@ -1,10 +1,8 @@
 import React from 'react'
 import './Discriptif.css'
-import test from './../../images/chaise.jpg'
 import BtnPanier from '../BtnPanier/BtnPanier'
 
 export default function Discriptif(props) {
-    console.log(props.cible);
   return (
     <div className='Discriptif'>
         <div className='tableau relative'>
