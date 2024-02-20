@@ -27,21 +27,21 @@ let images = [
     id: 2,
     titre : "Chaise",
     image: Chaise,
-    description : "Dans une scène artistique captivante, une chaise turquoise est habillée de coulures de peinture mauve et orange, agrémentée de nuances subtiles de jaune et de vert. Cette fusion de couleurs évoque une énergie créative dynamique et spontanée, faisant de cette chaise un symbole d'expression artistique et d'imagination débordante.",
+    description : "Une chaise turquoise est habillée de coulures de peinture mauve et orange, agrémentée de nuances subtiles de jaune et de vert. Cette fusion de couleurs évoque une énergie créative dynamique et spontanée, faisant de cette chaise un symbole d'expression artistique et d'imagination débordante.",
     prix : 0.59,
   },
   {
     id: 3,
     titre : "Chaton",
     image: Chaton,
-    description : "Découvrez un adorable chaton aux tons vifs et expressifs. Sa fourrure chatoyante, mêlant des nuances de mauve et d'orange, s'illumine subtilement de touches de jaune et de vert. Les teintes vibrantes reflètent la vitalité et la curiosité de ce jeune félin, captivant le cœur avec sa douceur et son charme irrésistibles.",
+    description : "Découvrez un adorable chaton aux tons vifs et expressifs. Mêlant des nuances de mauve et d'orange, s'illumine subtilement de touches de jaune et de vert. Les teintes vibrantes reflètent la vitalité et la curiosité de ce jeune félin, captivant le cœur avec sa douceur et son charme irrésistibles.",
     prix : 0.42,
   },
   {
     id: 4,
     titre : "Spoon",
     image: Cuillere,
-    description: "Dans une composition saisissante, une cuillère en bois repose délicatement sur une assiette, où se mêlent des éclats de mauve et d'orange, relevés par des touches subtiles de jaune et de vert. Les couleurs évoquent une harmonie organique, offrant une scène visuellement captivante et chaleureuse, tout en invitant à la contemplation et à la convivialité.",
+    description: "Dans une composition saisissante, une cuillère en bois repose délicatement sur une assiette remplit de couleurs, où se mêlent des éclats de mauve et d'orange, relevés par des touches subtiles de jaune et de vert. Les couleurs évoquent une harmonie organique, offrant une scène visuellement captivante et chaleureuse, tout en invitant à la contemplation et à la convivialité. ",
     prix : 0.58,
   },
   {
@@ -62,7 +62,7 @@ let images = [
     id: 7,
     titre : "Lion",
     image: Lion,
-    description: "Dans une profusion de couleurs, un lion adulte se tient majestueusement, sa crinière flamboyante captant la lumière. Entouré de teintes chatoyantes de bleu, de vert, de jaune, de nuances subtiles de mauve et de rose, il incarne la puissance et l'élégance au cœur de cette symphonie chromatique, révélant la magnificence de la nature dans toute sa splendeur.",
+    description: "Le Lion, dans une profusion de couleurs, un lion adulte se tient majestueusement, sa crinière flamboyante captant la lumière. Entouré de teintes chatoyantes de bleu, de vert, de jaune, de nuances subtiles de mauve et de rose, il incarne la puissance et l'élégance au cœur de cette symphonie chromatique, révélant la magnificence de la nature dans toute sa splendeur.",
     prix : 1,
   },
   {
