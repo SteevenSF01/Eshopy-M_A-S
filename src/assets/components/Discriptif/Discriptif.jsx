@@ -56,10 +56,10 @@ export default function Discriptif(props) {
           <div className="divBtnPanierDiscriptif">
             <div className="divBtnPanier">
               <button
+              className = {`${props.cible.quantite == 0 ? 'hidden': 'btnPanier mt-3'}`}
                 onClick={() => {
                   achetezPlusInfo(props.cible);
                 }}
-                className="btnPanier mt-3"
               >
                 Ajouter au panier
               </button>
