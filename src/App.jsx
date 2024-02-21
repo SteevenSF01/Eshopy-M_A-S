@@ -166,15 +166,6 @@ function App() {
   return (
     <>
       <div>
-<<<<<<< HEAD
-      <Navbar onLogoClick={handleLogoClick} />
-      {sidebarVisible && <Sidebar />}
-      
-    </div>
-      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={array} setCible = {setCible} cible = {cible} achetez = {achetez}  />
-      {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={array} cible = {cible} setArray = {setArray} setCible = {setCible} />  : ""}
-    <Footer/>
-=======
         <Navbar onLogoClick={handleLogoClick} />
         <div className=" pt-[120px] flex flex-col justify-center items-center mb-10">
           <h1 className="text-white text-[25px] md:text-[40px] lg:text-[60px]  ">
@@ -216,7 +207,7 @@ function App() {
       ) : (
         ""
       )}
->>>>>>> fb42f587117cc6410a1bf5c105da51a32e8599af
+      <Footer/>
     </>
   );
 }
