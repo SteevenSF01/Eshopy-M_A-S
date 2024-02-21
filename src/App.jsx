@@ -123,19 +123,19 @@ function App() {
   const [ouvert, setOuvert] = useState(false);
   const [cible, setCible] = useState(null)
 
-  const handleBuyNow = (element) => {
-    if (element.quantite > 0) {
-      element.quantite -= 1
-      console.log(element.quantite);
+  const achetez = () =>{
+    if (condition) {
       
     }
-  };
+  }
+
+
 
   return (
     <>
       <Navbar />
       {/* <Sidebar/> */}
-      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={images} setCible = {setCible} cible = {cible} handleBuyNow = {handleBuyNow} />
+      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={images} setCible = {setCible} cible = {cible} />
       {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={images} cible = {cible} />  : ""}
     </>
   );
