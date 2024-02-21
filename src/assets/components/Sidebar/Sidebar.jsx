@@ -6,8 +6,12 @@ export default function Sidebar(props) {
     <div className="sidebar fixed z-30 top-[50px] right-0 ">
       <div className="sidebarContainer relative">
         <div className="divTopSidebar">
-          <div className="divLeftSideBar">
+          <div className="divLeftSideBar flex flex-col">
             <p className="titleSidebar">Your shopping bag</p>
+            <p className="text-white text-[20px] font-medium ">
+              Solde : <span className="text-[#000239]">{props.solde} </span>
+              <span className="text-[15px]">ETH</span>
+            </p>
           </div>
           <div className="divRightBtnFermeture">
             <button
@@ -32,15 +36,29 @@ export default function Sidebar(props) {
                 <p className="textSidebar">
                   Prix: <span>{item.prix} ETH</span>
                 </p>
-                <p className="textSidebar">Quantités: <span>{item.quantite} pièces</span></p>
+                <p className="textSidebar">
+                  Quantités: <span>{item.quantite} pièces</span>
+                </p>
               </div>
             </div>
           ))}
         </div>
-        <div className="divBottomSidebar pb-[70px] ">
-          <button onClick={props.onLogoClick} className="btnSidebar py-3 px-4 border-2 border-white rounded-badge text-white  ">
+        <div className="divBottomSidebar pb-[70px] gap-4 ">
+          <button
+            onClick={props.onLogoClick}
+            className="btnSidebar py-3 px-4 border-2 border-white rounded-badge text-white  "
+          >
             Continuez votre shopping
           </button>
+          {props.solde > 0 ? (
+            <button className="btnSidebar py-3 px-4 border-2 border-white rounded-badge text-white hover:bg-white hover:text-black  ">
+              Achetez
+            </button>
+          ) : (
+            <button className="btnSidebar py-3 px-4 border-2 border-white rounded-badge  text-white cursor-not-allowed  ">
+              Solde insuffisant
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ let images = [
     image: Brain,
     description:
       "Une représentation artistique d'un cerveau humain émergeant dans un kaléidoscope de teintes douces de rose et de turquoise. Les courbes délicates et les nuances vibrantes captent l'essence de la pensée créative et de l'exploration mentale, invitant à la contemplation et à l'inspiration infinie.",
-    prix: 0.29,
+    prix: 2,
     auteur: "Aurora Montclair",
     quantite: 4,
   },
@@ -34,7 +34,7 @@ let images = [
     image: Chaise,
     description:
       "Une chaise turquoise est habillée de coulures de peinture mauve et orange, agrémentée de nuances subtiles de jaune et de vert. Cette fusion de couleurs évoque une énergie créative dynamique et spontanée, faisant de cette chaise un symbole d'expression artistique et d'imagination débordante.",
-    prix: 0.59,
+    prix: 3,
     auteur: "Remy Stellanova",
     quantite: 10,
   },
@@ -44,7 +44,7 @@ let images = [
     image: Chaton,
     description:
       "Découvrez un adorable chaton aux tons vifs et expressifs. Mêlant des nuances de mauve et d'orange, s'illumine subtilement de touches de jaune et de vert. Les teintes vibrantes reflètent la vitalité et la curiosité de ce jeune félin, captivant le cœur avec sa douceur et son charme irrésistibles.",
-    prix: 0.42,
+    prix: 4,
     auteur: "Isabella Quixotica",
     quantite: 5,
   },
@@ -54,7 +54,7 @@ let images = [
     image: Cuillere,
     description:
       "Dans une composition saisissante, une cuillère en bois repose délicatement sur une assiette remplit de couleurs, où se mêlent des éclats de mauve et d'orange, relevés par des touches subtiles de jaune et de vert. Les couleurs évoquent une harmonie organique, offrant une scène visuellement captivante et chaleureuse, tout en invitant à la contemplation et à la convivialité. ",
-    prix: 0.58,
+    prix: 1,
     auteur: "Jaxon Emberglow",
     quantite: 9,
   },
@@ -64,7 +64,7 @@ let images = [
     image: Dragon,
     description:
       "Un dragon imposant se tient sur ses quatre pattes, sa silhouette se détachant contre le ciel étoilé. Ses écailles d'un bleu-gris profond captent la lumière de la lune, tandis que des touches délicates de rose révèlent sa présence mystique. Avec sa stature impressionnante et ses nuances élégantes, il incarne à la fois la puissance brute et la beauté envoûtante des créatures légendaires.",
-    prix: 0.67,
+    prix: 2,
     auteur: "Marigold Celestia",
     quantite: 7,
   },
@@ -74,7 +74,7 @@ let images = [
     image: Gateau,
     description:
       "Imaginez un gâteau d'une élégance extraordinaire : ses couches délicates arborent des teintes de mauve et de pêche, tandis que des accents turquoise ajoutent une touche de vivacité. Une cascade de couleur mauve dégouline gracieusement sur les côtés du gâteau, créant un contraste saisissant. Chaque bouchée évoque une expérience gustative et visuelle inoubliable.",
-    prix: 0.15,
+    prix: 5,
     auteur: "El Japones",
     quantite: 11,
   },
@@ -84,7 +84,7 @@ let images = [
     image: Lion,
     description:
       "Le Lion, dans une profusion de couleurs, un lion adulte se tient majestueusement, sa crinière flamboyante captant la lumière. Entouré de teintes chatoyantes de bleu, de vert, de jaune, de nuances subtiles de mauve et de rose, il incarne la puissance et l'élégance au cœur de cette symphonie chromatique, révélant la magnificence de la nature dans toute sa splendeur.",
-    prix: 1,
+    prix: 10,
     auteur: "El Julio!",
     quantite: 3,
   },
@@ -94,7 +94,7 @@ let images = [
     image: Partiture,
     description:
       "Dans un tableau musical enchanté, un livre de partitions s'anime sous nos yeux, ses pages chatoyantes ornées de nuances de mauve, de turquoise et de pêche. Les notes prennent vie, s'élevant de manière magique du papier, vibrant de couleurs vives et éclatantes. Captivant les sens et éveillant l'âme à la beauté de l'art musical dans toute sa splendeur chromatique.",
-    prix: 0.9,
+    prix: 7,
     auteur: "Romanof",
     quantite: 8,
   },
@@ -104,7 +104,7 @@ let images = [
     image: Pont,
     description:
       "Surplombant les eaux paisibles de la mer, un pont en bois s'étend majestueusement, chaque planche révélant les marques du temps et de l'aventure. Des crayons de pastel bordent le chemin, leurs couleurs chaudes illuminant l'horizon avec une énergie vive et éclatante. Invitant les voyageurs à embarquer pour un voyage de découverte et d'inspiration le long de cette voie enchantée.",
-    prix: 0.62,
+    prix: 6,
     auteur: "Felix Nebuloso",
     quantite: 5,
   },
@@ -114,7 +114,7 @@ let images = [
     image: Tele,
     description:
       "Dans un hommage rétro, une télévision ancienne en blanc pur trône majestueusement, son écran noir prêt à capturer les histoires du passé. Des coulures de couleurs vives - rouge, jaune, vert, et orange - dégoulinent du sommet de l'appareil, ajoutant une touche d'éclat et de fantaisie à sa silhouette classique. Cette image évoque un mélange de nostalgie et de créativité, fusionnant le passé avec une énergie dynamique et colorée, prête à illuminer les moments présents.",
-    prix: 0.74,
+    prix: 4,
     auteur: "Orion Fableweaver",
     quantite: 3,
   },
@@ -125,7 +125,7 @@ function App() {
   const [cible, setCible] = useState(null);
   const [array, setArray] = useState(images);
   const [achat, setAchat] = useState([]);
-  const [solde, setSolde] = useState(465465);
+  const [solde, setSolde] = useState(50);
 
   const achetez = (array, element) => {
     const existingItem = achat.find((item) => item.id === element.id);
@@ -151,16 +151,39 @@ function App() {
         if (item.id === element.id && item.quantite > 0) {
           return { ...item, quantite: item.quantite - 1 };
         }
+        setSolde(solde - element.prix)
+
+        console.log(element);
         return item;
       });
       setArray(updatedArray);
       setAchat([...achat, { ...element, quantite: 1 }]);
     }
+    setSolde(solde - element.prix);
   };
 
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const handleLogoClick = () => {
     setSidebarVisible(!sidebarVisible);
+  };
+
+
+  const achetezPlusInfo = (cible) => {
+    const copieCible = { ...cible };
+    if (copieCible.quantite > 0) {
+      copieCible.quantite -= 1;
+      setCible(copieCible);
+    }
+
+    const nouveauArray = array.map((objet) => {
+      if (objet.id === copieCible.id) {
+        return copieCible;
+      }
+      return objet;
+    });
+
+    setArray(nouveauArray);
+    achetez(array, copieCible); 
   };
 
   return (
@@ -184,6 +207,7 @@ function App() {
             array={array}
             name={array.titre}
             price={array.prix}
+            solde={solde}
           />
         )}
       </div>
@@ -203,6 +227,7 @@ function App() {
           cible={cible}
           setArray={setArray}
           setCible={setCible}
+          achetezPlusInfo = {achetezPlusInfo}
         />
       ) : (
         ""

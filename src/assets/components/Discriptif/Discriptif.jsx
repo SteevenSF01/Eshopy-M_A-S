@@ -2,22 +2,22 @@ import React from "react";
 import "./Discriptif.css";
 
 export default function Discriptif(props) {
-  const achetezPlusInfo = (cible) => {
-    const copieCible = { ...cible };
-    if (copieCible.quantite > 0) {
-      copieCible.quantite -= 1;
-      props.setCible(copieCible);
-    }
+  // const achetezPlusInfo = (cible) => {
+  //   const copieCible = { ...cible };
+  //   if (copieCible.quantite > 0) {
+  //     copieCible.quantite -= 1;
+  //     props.setCible(copieCible);
+  //   }
 
-    const nouveauArray = props.lesImages.map((objet) => {
-      if (objet.id === copieCible.id) {
-        return copieCible;
-      }
-      return objet;
-    });
+  //   const nouveauArray = props.lesImages.map((objet) => {
+  //     if (objet.id === copieCible.id) {
+  //       return copieCible;
+  //     }
+  //     return objet;
+  //   });
 
-    props.setArray(nouveauArray);
-  };
+  //   props.setArray(nouveauArray);
+  // };
 
   return (
     <div className="Discriptif">
@@ -58,7 +58,7 @@ export default function Discriptif(props) {
               <button
               className = {`${props.cible.quantite == 0 ? 'hidden': 'btnPanier mt-3'}`}
                 onClick={() => {
-                  achetezPlusInfo(props.cible);
+                  props.achetezPlusInfo(props.cible);
                 }}
               >
                 Ajouter au panier
@@ -70,3 +70,5 @@ export default function Discriptif(props) {
     </div>
   );
 }
+
+
