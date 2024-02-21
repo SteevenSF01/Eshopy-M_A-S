@@ -4,6 +4,7 @@ import Discriptif from "./assets/components/Discriptif/Discriptif";
 import Navbar from "./assets/components/navbar/Navbar";
 import Card from "./assets/components/Card/Card";
 import Sidebar from "./assets/components/Sidebar/Sidebar";
+import Footer from "./assets/components/Footer/Footer"
 
 import Brain from "./assets/images/brain.jpg";
 import Chaise from "./assets/images/chaise.jpg";
@@ -151,6 +152,7 @@ function App() {
     </div>
       <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={array} setCible = {setCible} cible = {cible} achetez = {achetez}  />
       {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={array} cible = {cible} setArray = {setArray} setCible = {setCible} />  : ""}
+    <Footer/>
     </>
   )
 }
