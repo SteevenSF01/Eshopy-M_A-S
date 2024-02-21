@@ -122,20 +122,32 @@ let images = [
 function App() {
   const [ouvert, setOuvert] = useState(false);
   const [cible, setCible] = useState(null)
+  const [array, setArray] = useState(images)
 
-  const achetez = () =>{
-    if (condition) {
-      
-    }
-  }
+  // const achetez = (element) =>{
+  //   if (array.id == element.id && element.quantite > 0) {
+  //     setArray({...array, quantite: element.quantite -1})
+  //     console.log(element);
+  //   }
+  // }
 
+
+  const achetez = (array ,element) => {
+    const updatedArray = array.map((img) => {
+      if (img.id === element.id && img.quantite > 0) {
+        return { ...img, quantite: img.quantite - 1 };
+      }
+      return img;
+    });
+    setArray(updatedArray);
+  };
 
 
   return (
     <>
       <Navbar />
       {/* <Sidebar/> */}
-      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={images} setCible = {setCible} cible = {cible} />
+      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={array} setCible = {setCible} cible = {cible} achetez = {achetez} />
       {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={images} cible = {cible} />  : ""}
     </>
   );
