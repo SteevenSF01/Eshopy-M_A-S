@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { cloneElement, useState } from "react";
 import "./App.css";
 import Discriptif from "./assets/components/Discriptif/Discriptif";
 import Navbar from "./assets/components/navbar/Navbar";
@@ -15,6 +15,7 @@ import Lion from "./assets/images/LionTab.jpg";
 import Partiture from "./assets/images/partiture.jpg";
 import Pont from "./assets/images/pont.jpg";
 import Tele from "./assets/images/tele.jpg";
+
 
 let images = [
   {
@@ -124,31 +125,24 @@ function App() {
   const [cible, setCible] = useState(null)
   const [array, setArray] = useState(images)
 
-  // const achetez = (element) =>{
-  //   if (array.id == element.id && element.quantite > 0) {
-  //     setArray({...array, quantite: element.quantite -1})
-  //     console.log(element);
-  //   }
-  // }
-
 
   const achetez = (array ,element) => {
-    const updatedArray = array.map((img) => {
-      if (img.id === element.id && img.quantite > 0) {
-        return { ...img, quantite: img.quantite - 1 };
+    const nouveauArray = array.map((objet) => {
+      if (objet.id === element.id && objet.quantite > 0) {
+        return { ...objet, quantite: objet.quantite - 1 };
       }
-      return img;
+      return objet;
     });
-    setArray(updatedArray);
+    setArray(nouveauArray);
   };
-
+  
 
   return (
     <>
       <Navbar />
       {/* <Sidebar/> */}
-      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={array} setCible = {setCible} cible = {cible} achetez = {achetez} />
-      {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={images} cible = {cible} />  : ""}
+      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={array} setCible = {setCible} cible = {cible} achetez = {achetez}  />
+      {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={array} cible = {cible} setArray = {setArray} setCible = {setCible} />  : ""}
     </>
   );
 }
