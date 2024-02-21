@@ -4,12 +4,16 @@
     
 }
 
+
+
 .sidebarContainer{
     height: 100vh;
     width: 500px;
     border: 2px solid white;
     background-color: black;
+    
 }
+
 
 .divTopSidebar{
     display: flex;
@@ -30,6 +34,13 @@
     color: white;
     font-size: 22px;
     font-weight: 500;
+}
+
+.divRightBtnFermeture{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 134px;
 }
 
 .btnFermeture{

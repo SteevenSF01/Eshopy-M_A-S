@@ -129,15 +129,23 @@ function App() {
     }
   }
 
-
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const handleLogoClick = () => {
+    setSidebarVisible(!sidebarVisible);
+  };
+ 
 
   return (
     <>
-      <Navbar />
-      {/* <Sidebar/> */}
+      <div>
+      <Navbar onLogoClick={handleLogoClick} />
+      {sidebarVisible && <Sidebar />}
+      
+    </div>
       <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={images} setCible = {setCible} cible = {cible} />
       {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={images} cible = {cible} />  : ""}
     </>
+
   );
 }
 
