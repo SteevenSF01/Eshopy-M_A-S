@@ -6,16 +6,7 @@ export default function Card(props) {
 
   return (
     <>
-      <div className=" pt-[120px] flex flex-col justify-center items-center mb-10">
-        <h1 className="text-white text-[25px] md:text-[40px] lg:text-[60px]  ">
-          Bienvenue à N.F.T Art
-        </h1>
-        <p className="text-white text-[13px] w-[300px] pt-4 md:pt md:text-[15px] md:w-[600px] lg:w-[800px] text-center ">
-          Découvrez l'avenir de l'art avec NFT Art : une collection infinie
-          d'œuvres numériques uniques, où la créativité rencontre la blockchain
-          pour une expérience artistique inoubliable.
-        </p>
-      </div>
+
 
       <div className="flex flex-wrap justify-center items-center gap-16 pt[25px] md:pt-[50px] ">
         {props.lesImages.map((element, key) => {
@@ -34,7 +25,7 @@ export default function Card(props) {
               <div className="card-body">
                 <h2 className="card-title text-[30px] ">{element.titre}</h2>
                 <p>{element.description}</p>
-                <p>Quantité disponible: {element.quantite}  Pieces</p>
+                <p className="font-bold text-[15px] ">Quantité disponible : <span className="text-sm">{element.quantite}  Pieces</span></p>
                 <div className="card-actions justify-between">
                   <button 
                   onClick={() => {props.setOuvert(!props.ouvert); props.setCible(element)}}

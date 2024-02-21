@@ -16,7 +16,6 @@ import Partiture from "./assets/images/partiture.jpg";
 import Pont from "./assets/images/pont.jpg";
 import Tele from "./assets/images/tele.jpg";
 
-
 let images = [
   {
     id: 1,
@@ -26,7 +25,7 @@ let images = [
       "Une représentation artistique d'un cerveau humain émergeant dans un kaléidoscope de teintes douces de rose et de turquoise. Les courbes délicates et les nuances vibrantes captent l'essence de la pensée créative et de l'exploration mentale, invitant à la contemplation et à l'inspiration infinie.",
     prix: 0.29,
     auteur: "Aurora Montclair",
-    quantite : 4,
+    quantite: 4,
   },
   {
     id: 2,
@@ -35,8 +34,8 @@ let images = [
     description:
       "Une chaise turquoise est habillée de coulures de peinture mauve et orange, agrémentée de nuances subtiles de jaune et de vert. Cette fusion de couleurs évoque une énergie créative dynamique et spontanée, faisant de cette chaise un symbole d'expression artistique et d'imagination débordante.",
     prix: 0.59,
-    auteur : "Remy Stellanova",
-    quantite : 10,
+    auteur: "Remy Stellanova",
+    quantite: 10,
   },
   {
     id: 3,
@@ -45,8 +44,8 @@ let images = [
     description:
       "Découvrez un adorable chaton aux tons vifs et expressifs. Mêlant des nuances de mauve et d'orange, s'illumine subtilement de touches de jaune et de vert. Les teintes vibrantes reflètent la vitalité et la curiosité de ce jeune félin, captivant le cœur avec sa douceur et son charme irrésistibles.",
     prix: 0.42,
-    auteur : "Isabella Quixotica",
-    quantite : 5,
+    auteur: "Isabella Quixotica",
+    quantite: 5,
   },
   {
     id: 4,
@@ -55,8 +54,8 @@ let images = [
     description:
       "Dans une composition saisissante, une cuillère en bois repose délicatement sur une assiette remplit de couleurs, où se mêlent des éclats de mauve et d'orange, relevés par des touches subtiles de jaune et de vert. Les couleurs évoquent une harmonie organique, offrant une scène visuellement captivante et chaleureuse, tout en invitant à la contemplation et à la convivialité. ",
     prix: 0.58,
-    auteur : "Jaxon Emberglow",
-    quantite : 9,
+    auteur: "Jaxon Emberglow",
+    quantite: 9,
   },
   {
     id: 5,
@@ -75,7 +74,7 @@ let images = [
     description:
       "Imaginez un gâteau d'une élégance extraordinaire : ses couches délicates arborent des teintes de mauve et de pêche, tandis que des accents turquoise ajoutent une touche de vivacité. Une cascade de couleur mauve dégouline gracieusement sur les côtés du gâteau, créant un contraste saisissant. Chaque bouchée évoque une expérience gustative et visuelle inoubliable.",
     prix: 0.15,
-    auteur : "El Japones",
+    auteur: "El Japones",
     quantite: 11,
   },
   {
@@ -85,7 +84,7 @@ let images = [
     description:
       "Le Lion, dans une profusion de couleurs, un lion adulte se tient majestueusement, sa crinière flamboyante captant la lumière. Entouré de teintes chatoyantes de bleu, de vert, de jaune, de nuances subtiles de mauve et de rose, il incarne la puissance et l'élégance au cœur de cette symphonie chromatique, révélant la magnificence de la nature dans toute sa splendeur.",
     prix: 1,
-    auteur : "El Julio!",
+    auteur: "El Julio!",
     quantite: 3,
   },
   {
@@ -95,8 +94,8 @@ let images = [
     description:
       "Dans un tableau musical enchanté, un livre de partitions s'anime sous nos yeux, ses pages chatoyantes ornées de nuances de mauve, de turquoise et de pêche. Les notes prennent vie, s'élevant de manière magique du papier, vibrant de couleurs vives et éclatantes. Captivant les sens et éveillant l'âme à la beauté de l'art musical dans toute sa splendeur chromatique.",
     prix: 0.9,
-    auteur : "Romanof",
-    quantite : 8
+    auteur: "Romanof",
+    quantite: 8,
   },
   {
     id: 9,
@@ -105,7 +104,7 @@ let images = [
     description:
       "Surplombant les eaux paisibles de la mer, un pont en bois s'étend majestueusement, chaque planche révélant les marques du temps et de l'aventure. Des crayons de pastel bordent le chemin, leurs couleurs chaudes illuminant l'horizon avec une énergie vive et éclatante. Invitant les voyageurs à embarquer pour un voyage de découverte et d'inspiration le long de cette voie enchantée.",
     prix: 0.62,
-    auteur : "Felix Nebuloso",
+    auteur: "Felix Nebuloso",
     quantite: 5,
   },
   {
@@ -116,43 +115,99 @@ let images = [
       "Dans un hommage rétro, une télévision ancienne en blanc pur trône majestueusement, son écran noir prêt à capturer les histoires du passé. Des coulures de couleurs vives - rouge, jaune, vert, et orange - dégoulinent du sommet de l'appareil, ajoutant une touche d'éclat et de fantaisie à sa silhouette classique. Cette image évoque un mélange de nostalgie et de créativité, fusionnant le passé avec une énergie dynamique et colorée, prête à illuminer les moments présents.",
     prix: 0.74,
     auteur: "Orion Fableweaver",
-    quantite : 3,
+    quantite: 3,
   },
 ];
 
 function App() {
   const [ouvert, setOuvert] = useState(false);
-  const [cible, setCible] = useState(null)
-  const [array, setArray] = useState(images)
+  const [cible, setCible] = useState(null);
+  const [array, setArray] = useState(images);
+  const [achat, setAchat] = useState([]);
+  const [solde, setSolde] = useState(465465);
 
+  const achetez = (array, element) => {
+    const existingItem = achat.find((item) => item.id === element.id);
 
-  const achetez = (array ,element) => {
-    const nouveauArray = array.map((objet) => {
-      if (objet.id === element.id && objet.quantite > 0) {
-        return { ...objet, quantite: objet.quantite - 1 };
-      }
-      return objet;
-    });
-    setArray(nouveauArray);
+    if (existingItem) {
+      const updatedItem = array.map((item) => {
+        if (item.id === existingItem.id && item.quantite > 0) {
+          return { ...item, quantite: item.quantite - 1 };
+        }
+        return item;
+      });
+      setArray(updatedItem);
+      setAchat(
+        achat.map((item) => {
+          if (item.id === existingItem.id) {
+            return { ...item, quantite: item.quantite + 1 };
+          }
+          return item;
+        })
+      );
+    } else {
+      const updatedArray = array.map((item) => {
+        if (item.id === element.id && item.quantite > 0) {
+          return { ...item, quantite: item.quantite - 1 };
+        }
+        return item;
+      });
+      setArray(updatedArray);
+      setAchat([...achat, { ...element, quantite: 1 }]);
+    }
   };
-  
+
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const handleLogoClick = () => {
     setSidebarVisible(!sidebarVisible);
   };
- 
 
   return (
     <>
       <div>
-      <Navbar onLogoClick={handleLogoClick} />
-      {sidebarVisible && <Sidebar />}
-      
-    </div>
-      <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={array} setCible = {setCible} cible = {cible} achetez = {achetez}  />
-      {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={array} cible = {cible} setArray = {setArray} setCible = {setCible} />  : ""}
+        <Navbar onLogoClick={handleLogoClick} />
+        <div className=" pt-[120px] flex flex-col justify-center items-center mb-10">
+          <h1 className="text-white text-[25px] md:text-[40px] lg:text-[60px]  ">
+            Bienvenue à N.F.T Art
+          </h1>
+          <p className="text-white text-[13px] w-[300px] pt-4 md:pt md:text-[15px] md:w-[600px] lg:w-[800px] text-center ">
+            Découvrez l'avenir de l'art avec NFT Art : une collection infinie
+            d'œuvres numériques uniques, où la créativité rencontre la
+            blockchain pour une expérience artistique inoubliable.
+          </p>
+        </div>
+        {sidebarVisible && (
+          <Sidebar
+            onLogoClick={handleLogoClick}
+            achat={achat}
+            array={array}
+            name={array.titre}
+            price={array.prix}
+          />
+        )}
+      </div>
+      <Card
+        ouvert={ouvert}
+        setOuvert={setOuvert}
+        lesImages={array}
+        setCible={setCible}
+        cible={cible}
+        achetez={achetez}
+      />
+      {ouvert ? (
+        <Discriptif
+          ouvert={ouvert}
+          setOuvert={setOuvert}
+          lesImages={array}
+          cible={cible}
+          setArray={setArray}
+          setCible={setCible}
+        />
+      ) : (
+        ""
+      )}
     </>
-  )
+  );
 }
 
 export default App;
