@@ -2,14 +2,7 @@ import React, {useState} from 'react'
 import './Sidebar.css'
 import test2 from './../../images/chatton.jpg'
 export default function Sidebar() {
-    const [active, setActive] = useState(false);
-
-    function closeItem() {
-        setActive(true);
-      }
-      function openItem() {
-        setActive(false);
-      }
+    
   return (
     <div className='sidebar'>
          <div className='sidebarContainer'>
@@ -19,7 +12,10 @@ export default function Sidebar() {
                         Your shopping bag
                     </p>
                 </div>
-                <button onClick={closeItem} className='btnFermeture'>X</button>
+                <div className='divRightBtnFermeture'>
+                    <button className='btnFermeture'>X</button>
+                </div>
+                
             </div>
             <div className='divMidSidebar'>
                 <div className='containerDivMidSidebar'>

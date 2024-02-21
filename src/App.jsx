@@ -136,15 +136,23 @@ function App() {
     setArray(nouveauArray);
   };
   
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const handleLogoClick = () => {
+    setSidebarVisible(!sidebarVisible);
+  };
+ 
 
   return (
     <>
-      <Navbar />
-      {/* <Sidebar/> */}
+      <div>
+      <Navbar onLogoClick={handleLogoClick} />
+      {sidebarVisible && <Sidebar />}
+      
+    </div>
       <Card ouvert={ouvert} setOuvert={setOuvert} lesImages={array} setCible = {setCible} cible = {cible} achetez = {achetez}  />
       {ouvert ? <Discriptif ouvert={ouvert} setOuvert={setOuvert} lesImages={array} cible = {cible} setArray = {setArray} setCible = {setCible} />  : ""}
     </>
-  );
+  )
 }
 
 export default App;
