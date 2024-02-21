@@ -35,7 +35,7 @@ export default function Discriptif(props) {
           </div>
         </div>
         <div className="divRightTableau">
-          <div className="divTitle">
+          <div className="divTitle mt-5">
             <p className="titleDiscriptif">{props.cible.titre}</p> <br />
           </div>
           <p className="paragapheTitle">
