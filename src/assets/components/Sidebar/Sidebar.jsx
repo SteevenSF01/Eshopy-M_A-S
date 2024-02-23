@@ -8,10 +8,12 @@ export default function Sidebar(props) {
         <div className="divTopSidebar">
           <div className="divLeftSideBar flex flex-col">
             <p className="titleSidebar">Your shopping bag</p>
-            <p className="text-white text-[20px] font-medium ">
+              {props.solde > 0 ?
+            (<p className="text-white text-[20px] font-medium ">
               Solde : <span className="text-[#000239]">{props.solde} </span>
               <span className="text-[15px]">ETH</span>
-            </p>
+            </p>) : <p>Solde insuffisant</p>
+              }
           </div>
           <div className="divRightBtnFermeture">
             <button
