@@ -3,46 +3,45 @@ import './Footer.css'
 import LOGO from './../../images/logo.png'
 import instagram from './../../images/instagram.png'
 import facebook from './../../images/facebook.png'
-import snapchat from './../../images/snapchat.png'
+import nft from './../../images/nft.png'
 import twitter from './../../images/twitter.png'
 export default function Footer() {
   return (
     <>
-        <footer className=' bg-[linear-gradient(60deg,_rgba(0,2,57,1)_40%,_rgba(235,33,200,1)_100%)]'>
-            <div className='divTopFooter'>
-                <img src={LOGO} alt="" className='logoFooter'/>
+        <footer className=' bg-[linear-gradient(60deg,_rgba(0,2,57,1)_40%,_rgba(255,255,255,1)_100%)] text-white border-t-2 mt-[60px]'>
+            <div className='flex justify-center'>
+                <img src={LOGO} className='w-[200px] h-[70px] my-5 '/>
             </div>
-            <div className='divMidFooter'>
-                <img className='logoReseauFooter' src={instagram} alt="" />
-                <img className='logoReseauFooter2' src={facebook} alt=""/>
-                <img className='logoReseauFooter3' src={snapchat} alt="" />
-                <img className='logoReseauFooter4' src={twitter} alt=""/>
+            <div className='flex justify-center gap-7 mb-5 lg:my-0   lg:mb-[40px] '>
+                <img className='w-[30px] md:w-[35px] lg:w-[40px] hover:scale-[1.2] cursor-pointer duration-700 hover:-translate-y-1 ' src={instagram}  />
+                <img className='w-[30px] md:w-[35px] lg:w-[40px] hover:scale-[1.2] cursor-pointer duration-700 hover:-translate-y-1 ' src={facebook} />
+                <img className='w-[30px] md:w-[35px] lg:w-[40px] hover:scale-[1.2] cursor-pointer duration-700 hover:-translate-y-1 ' src={nft}  />
+                <img className='w-[30px] md:w-[35px] lg:w-[40px] hover:scale-[1.2] cursor-pointer duration-700 hover:-translate-y-1 ' src={twitter} />
             </div>
-            <div className='divBottomFooter'>
-                <div className='divBottomLeftFooter'>
-                    <h3>Shop</h3>
-                    <p className='textFooter'>For Women</p>
-                    <p className='textFooter'>For Men</p>
-                    <p className='textFooter'>Stores</p>
-                    <p className='textFooter'>Our Blog</p>
+            <div className=' text-[13px]  md:text-[15px] leading-6 w-[350px] md:w-[600px] lg:w-[800px] lg:text-[18px] mx-auto flex justify-around lg:leading-8 flex-wrap'>
+                <div className=''>
+                    <p className='hover:underline cursor-pointer'>Shop</p>
+                    <p className='hover:underline cursor-pointer'>For Women</p>
+                    <p className='hover:underline cursor-pointer'>Stores</p>
+                    <p className='hover:underline cursor-pointer'>Our Blog</p>
                 </div>
-                <div className='divBottomMidFooter'>
-                    <h3>COMPANY</h3>
-                    <p className='textFooter'>Login</p>
-                    <p className='textFooter'>Register</p>
-                    <p className='textFooter'>Wishlist</p>
-                    <p className='textFooter'>Our Products</p>
+                <div className=''>
+                    <p className='hover:underline cursor-pointer'>Company</p>
+                    <p className='hover:underline cursor-pointer'>Login</p>
+                    <p className='hover:underline cursor-pointer'>Register</p>
+                    <p className='hover:underline cursor-pointer'>Wishlist</p>
                 </div>
-                <div className='divBottomBottomFoter'>
-                    <h3>Home</h3>
-                    <h3>Explorer</h3>
-                    <h3>FAQ</h3>
-                    <h3>About</h3>
+                <div className=''>
+                    <p className='hover:underline cursor-pointer'>Home</p>
+                    <p className='hover:underline cursor-pointer'>Explorer</p>
+                    <p className='hover:underline cursor-pointer'>FAQ</p>
+                    <p className='hover:underline cursor-pointer'>About</p>
                 </div>
             </div>
-                <div className='divCopyright'>
-                    <p className='copyright'>
-                        © Copyright Molengeek 2024
+            <hr className='mt-[40px] mb-2' />
+                <div className='divCopyright '>
+                    <p className='copyright pb-2 text-center text-[10px] md:text-[13px] '>
+                        © Copyright Steeven et Momo 2024
                     </p>
                 </div>
             

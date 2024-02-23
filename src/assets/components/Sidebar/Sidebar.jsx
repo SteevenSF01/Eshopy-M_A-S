@@ -7,10 +7,10 @@ export default function Sidebar(props) {
       <div className="sidebarContainer relative">
         <div className="divTopSidebar">
           <div className="divLeftSideBar flex flex-col">
-            <p className="titleSidebar">Your shopping bag</p>
+            <p className="titleSidebar my-5">Your shopping bag</p>
               {props.solde > 0 ?
-            (<p className="text-white text-[20px] font-medium ">
-              Solde : <span className="text-[#000239]">{props.solde} </span>
+            (<p className="text-white text-[20px] font-medium pb-5">
+              Solde : <span className="text-white">{props.solde} </span>
               <span className="text-[15px]">ETH</span>
             </p>) : <p>Solde insuffisant</p>
               }
@@ -38,7 +38,7 @@ export default function Sidebar(props) {
                 <p className="textSidebar">
                   Prix: <span>{item.prix} ETH</span>
                 </p>
-                <p className="textSidebar">
+                <p className="textSidebar ">
                   Quantités: <span>{item.quantite} pièces</span>
                 </p>
               </div>

@@ -13,7 +13,7 @@ export default function Card(props) {
           return (
             <div
               key={key}
-              className={`${element.quantite == 1? 'animate-pulse':'' } card card-compact text-white w-[300px] h-fit md:w-[400px] p-2 shadow-white shadow-md bg-base-100  `}
+              className={`${element.quantite == 1? 'animate-pulse':'' } card card-compact text-white w-[300px] h-fit md:w-[300px] lg:w-[400px] p-2 shadow-white shadow-md bg-base-100  `}
             >
               <figure className="shadow-black shadow-sm rounded-xl">
                 <img
@@ -22,9 +22,9 @@ export default function Card(props) {
                   className="duration-1000 hover:scale-[1.1] hover:rotate-1"
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body ">
                 <h2 className="card-title text-[30px] ">{element.titre}</h2>
-                <p>{element.description}</p>
+                <p className=" line-clamp-2 lg:line-clamp-6">{element.description}</p>
                 <p className="font-bold text-[15px] ">Quantité disponible : <span className="text-sm">{element.quantite}  Pieces</span></p>
                 <div className="card-actions justify-between">
                   <button 

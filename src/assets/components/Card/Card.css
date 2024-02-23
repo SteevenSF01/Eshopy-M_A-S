@@ -1,5 +1,6 @@
 .card-compact{
-    background: linear-gradient(145deg,#23d5ab, #23a6d5, #82245f, #ee7752 ); 
+    background: linear-gradient(145deg,#000239, #0b0e5a, #5e617c, #848383 ); 
+    /* background: linear-gradient(145deg,#23d5ab, #2ca8d5, #8e95e4, #ffffff );  */
     background-size: 400% 400%;
     animation: gradient2 4s ease infinite;
 }

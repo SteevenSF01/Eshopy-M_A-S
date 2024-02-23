@@ -1,118 +1,108 @@
-.sidebar{
-    display: flex;
-    justify-content: flex-end;
-    width: 100vw;
-    backdrop-filter: blur(5px); 
+.sidebar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  backdrop-filter: blur(5px);
 }
 
-
-
-.sidebarContainer{
-    height: 100vh;
-    overflow: scroll;
-    width: 500px;
-    border: 2px solid white;
-    background: linear-gradient(145deg,#23d5ab, #23a6d5, #82245f, #ee7752 ); 
-    background-size: 400% 400%;
-    animation: gradient2 4s ease infinite;
-    
-    &::-webkit-scrollbar{
-        background-color: transparent;
-    }
-}
-
-
-.divTopSidebar{
-    display: flex;
-    padding: 20px;
-}
-
-.divLeftSideBar{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.titleSidebar{
-    color: white;
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.divRightBtnFermeture{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.btnFermeture{
+.sidebarContainer {
+  height: 100vh;
+  overflow: scroll;
+  width: 500px;
+  border: 2px solid white;
+  padding-left: 15px;
+  background: linear-gradient(160deg,#000239 0%, #0b0e5a 40%, #55597b 80%, #6b6a6a 100% ); 
+  background-size: 300% 400%;
+  animation: gradient2 4s ease infinite;
+  &::-webkit-scrollbar {
     background-color: transparent;
-    border: 1px solid white;
-    height: 35px;
-    width: 35px;
-    color: white;
+  }
+}
+.divLeftSideBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btnFermeture:hover{
-    background-color: red;
+.titleSidebar {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
 }
 
-.divMidSidebar{
-    display: flex;
-    justify-content: center;
+.divRightBtnFermeture {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.containerDivMidSidebar{
-    height: 150px;
-    width: 400px;
-    border: 2px solid white;
-    display: flex;
+.btnFermeture {
+  background-color: transparent;
+  border: 1px solid white;
+  height: 35px;
+  width: 35px;
+  color: white;
 }
 
-.divMidLeftSidebar{
+.btnFermeture:hover {
+  background-color: red;
+}
+
+.divMidSidebar {
+  display: flex;
+  justify-content: center;
+}
+
+.containerDivMidSidebar {
+  height: 170px;
+  width: 400px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+}
+.divMidLeftSidebar {
     height: 100%;
     width: 40%;
+    padding: 4px;
     border-right: 2px solid white;
 }
-
-.divMidRightSidebar{
+.divMidRightSidebar {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+    align-items: start;
+    margin-inline: auto;
+}
+.logoTest2 {
+  height: 100%;
+  width: 100%;
+}
+.textSidebar {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 600;
+}
+.divBottomSidebar {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.logoTest2{
-    height: 100%;
-    width: 100%;
+@media (max-width: 376px) {
+    .textSidebar{
+        font-size: 15px;
+    }
 }
-
-.textSidebar{
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.divBottomSidebar{
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-
-
-
 @keyframes gradient2 {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

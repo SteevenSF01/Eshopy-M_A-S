@@ -153,7 +153,6 @@ function App() {
         }
         setSolde(solde - element.prix)
 
-        console.log(element);
         return item;
       });
       setArray(updatedArray);
